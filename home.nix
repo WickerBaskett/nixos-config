@@ -42,6 +42,12 @@
   services.mako = {
     enable = true;
   };
+
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+    style = builtins.readFile dots/waybar/style.css;
+  };
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
