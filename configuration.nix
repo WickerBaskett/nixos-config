@@ -64,6 +64,7 @@
     kitty
     firefox
     git
+    tree
   ];
 
   programs.hyprland = {
