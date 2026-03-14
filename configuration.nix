@@ -47,6 +47,10 @@
     layout = "us";
     variant = "";
   };
+  
+  # Enable Display Manager
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.wicker = {
@@ -65,6 +69,8 @@
     firefox
     git
     tree
+    rofi
+    mako
   ];
 
   programs.hyprland = {
@@ -72,6 +78,8 @@
     withUWSM = true;
     xwayland.enable = true;
   };
+
+  programs.waybar.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
