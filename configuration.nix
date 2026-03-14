@@ -71,6 +71,7 @@
     tree
     rofi
     mako
+    vscodium
   ];
 
   # Install nerd fonts
