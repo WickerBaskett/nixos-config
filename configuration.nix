@@ -8,6 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./system/docker
+      ./system/languages
     ];
 
   # Bootloader.
@@ -95,6 +97,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  programs.ssh.startAgent = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
