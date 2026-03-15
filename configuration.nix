@@ -73,6 +73,7 @@
     tree
     vscodium
     mongosh
+    yazi
   ];
 
 
