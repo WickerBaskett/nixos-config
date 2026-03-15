@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./system/docker
       ./system/languages
+      ./system/wm/hyprland
     ];
 
   # Bootloader.
@@ -67,24 +68,13 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
-    kitty
     firefox
     git
     tree
-    rofi
-    mako
     vscodium
     mongosh
   ];
 
-  # Install nerd fonts
-  fonts.packages = [ pkgs.jetbrains-mono ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
