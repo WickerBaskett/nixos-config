@@ -74,6 +74,7 @@
     rofi
     mako
     vscodium
+    mongosh
   ];
 
   # Install nerd fonts

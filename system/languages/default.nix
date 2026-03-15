@@ -2,6 +2,6 @@
 
 {
   imports = [
-    #./python.nix
+    ./python.nix
   ];
 }
