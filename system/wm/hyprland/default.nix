@@ -5,6 +5,7 @@
     kitty
     rofi
     mako
+    hyprpaper
   ];
 
   # Install nerd fonts

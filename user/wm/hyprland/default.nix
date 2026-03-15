@@ -4,6 +4,7 @@
   imports = [
     ./waybar.nix
     ./mako.nix
+    ./hyprpaper.nix
   ];
 
   home.file = {
