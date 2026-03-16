@@ -14,8 +14,8 @@
         a = "add";
         aa = "add --all";
         ci = "commit -m";
-        p = "pull";
-        ph = "push";
+        pl = "pull";
+        p = "push";
         co = "checkout";
         cob = "checkout -b";
         s = "status";
