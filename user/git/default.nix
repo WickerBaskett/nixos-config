@@ -20,6 +20,7 @@
         cob = "checkout -b";
         s = "status";
         f = "fetch --prune";
+        b = "branch -a";
         rh = "reset --hard";
       };
     };
