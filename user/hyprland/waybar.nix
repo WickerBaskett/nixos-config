@@ -4,7 +4,7 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    style = builtins.readFile ../../../dots/waybar/style.css;
+    style = builtins.readFile ../../dots/waybar/style.css;
     settings = [{
       layer = "top";
       position = "top";

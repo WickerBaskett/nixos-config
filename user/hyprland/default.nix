@@ -8,6 +8,6 @@
   ];
 
   home.file = {
-    ".config/hypr/hyprland.conf".source = ../../../dots/hyprland.conf;
+    ".config/hypr/hyprland.conf".source = ../../dots/hyprland.conf;
   };
 }

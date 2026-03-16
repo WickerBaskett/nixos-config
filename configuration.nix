@@ -12,7 +12,6 @@
       ./system/docker
       ./system/languages
       ./system/hyprland
-      ./system/git
     ];
 
   # Bootloader.

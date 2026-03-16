@@ -19,6 +19,7 @@
     shellAliases = {
       ll = "ls -l";
       ".." = "cd ..";
+      "dcup" = "docker compose down; docker compose build; docker compose up";
     };
   };
   
