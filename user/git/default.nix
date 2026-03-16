@@ -23,6 +23,9 @@
         b = "branch -a";
         rh = "reset --hard";
       };
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
   };
 }

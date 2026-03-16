@@ -4,29 +4,53 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
-    style = builtins.readFile ../../dots/waybar/style.css;
+    style = ''
+      * {
+        border: none;
+        border-radius: 5px;
+        font-family: Cartograph CF Nerd Font, monospace;
+        font-weight: bold;
+        font-size: 16px;
+        min-height: 0;
+      }
+
+      window#waybar {
+        background: rgba(21, 18, 27, 255);
+        color: #cdd6f4;
+      }
+
+      #workspaces button.active {
+        color: #9ccfd8;
+      }
+
+      #workspaces button.focused {
+        color: #9ccfd8;
+      }
+
+    ''; 
     settings = [{
       layer = "top";
       position = "top";
-      mod = "dock";
+      mode = "dock";
+      margin-left = 4;
+      margin-right = 4;
+      margin-top = 4;
+      spacing = 12;
+      fixed-center = true;
       exclusive = true;
       passtrough = false;
       gtk-layer-shell = true;
-      height = 0;
       modules-left = [
+        "custom/nixos"
         "cpu"
-        "custom/divider"
         "memory"
       ];
       modules-center = [ "hyprland/workspaces" ];
       modules-right = [
         "network"
-        "custom/divider"
         "pulseaudio"
-        "custom/divider"
         "clock"
       ];
-      "hyprland/window" = { format = "{}"; };
       "wlr/workspaces" = {
         on-scroll-up = "hyprctl dispatch workspace e+1";
         on-scroll-down = "hyprctl dispatch workspace e-1";
@@ -41,7 +65,7 @@
       };
       memory = {
         interval = 30;
-        format = "  {}%";
+        format = " {}%";
         format-alt = " {used:0.1f}G";
         max-length = 10;
       };
@@ -59,7 +83,8 @@
         format-disconnected = "󰖪 disconnected";
       };
       clock = {
-        format = " {:%I:%M %p   %m/%d} ";
+        format = "{:%a %Y-%m-%d %I:%M:%S %p}  ";
+        interval = 1;
         tooltip-format = ''
           <big>{:%Y %B}</big>
           <tt><small>{calendar}</small></tt>'';
@@ -92,17 +117,10 @@
         on-scroll-down = "pamixer --default-source -d 5";
         scroll-step = 5;
       };
-      "custom/divider" = {
-        format = " | ";
+      "custom/nixos" = {
+        format = "<span foreground='#7EBAE4'> </span>";
         interval = "once";
-        tooltip = false;
-      };
-      "custom/endright" = {
-        format = "_";
-        interval = "once";
-        tooltip = false;
       };
     }];
-
   };
 }
