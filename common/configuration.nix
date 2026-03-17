@@ -8,9 +8,9 @@
   nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
-      ./system/docker
-      ./system/languages
-      ./system/hyprland
+      ../system/docker
+      ../system/languages
+      ../system/hyprland
     ];
 
   # Bootloader.

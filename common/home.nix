@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./user/hyprland
-    ./user/editor
-    ./user/git
+    ../user/hyprland
+    ../user/editor
+    ../user/git
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

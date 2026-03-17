@@ -44,6 +44,7 @@
         "custom/nixos"
         "cpu"
         "memory"
+        "battery"
       ];
       modules-center = [ "hyprland/workspaces" ];
       modules-right = [
@@ -88,6 +89,10 @@
         tooltip-format = ''
           <big>{:%Y %B}</big>
           <tt><small>{calendar}</small></tt>'';
+      };
+      battery = {
+        interval=30;
+        format = "󰁹{capacity}%";
       };
       pulseaudio = {
         format = "{icon} {volume}%";
