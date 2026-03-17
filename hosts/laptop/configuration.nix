@@ -2,7 +2,8 @@
 
 {
   imports = [ 
-    ../../common-configuration.nix
+    ../../common/configuration.nix
     ./hardware-configuration.nix
   ];
+  networking.hostName = "nixos-laptop"; # Define your hostname.
 }
