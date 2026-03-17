@@ -10,6 +10,7 @@
     settings = {
       user.name = "erlewa";
       user.email = "erlewandowski@alaska.edu";
+      pull.ff = "only";
       alias = {
         a = "add";
         aa = "add --all";
