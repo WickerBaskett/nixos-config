@@ -14,17 +14,27 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {  
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      nixos-desktop = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ ./hosts/desktop/configuration.nix ];
+      };
+
+      nixos-laptop = lib.nixosSystem {
+        inherit system;
+        modules = [ ./hosts/laptop/configuration.nix ];
       };
     };
     
     homeConfigurations = {
-      wicker = home-manager.lib.homeManagerConfiguration {
+      "wicker@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
+        modules = [ .hosts/desktop/home.nix ];
       };
+
+      "wicker@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ .hosts/laptop/home.nix ];
+      }
     }; 
   };
 }
