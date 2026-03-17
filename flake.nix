@@ -28,12 +28,12 @@
     homeConfigurations = {
       "wicker@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ .hosts/desktop/home.nix ];
+        modules = [ ./hosts/desktop/home.nix ];
       };
 
       "wicker@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ .hosts/laptop/home.nix ];
+        modules = [ ./hosts/laptop/home.nix ];
       };
     }; 
   };
