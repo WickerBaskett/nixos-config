@@ -91,7 +91,11 @@
           <tt><small>{calendar}</small></tt>'';
       };
       battery = {
-        interval=30;
+        interval = 30;
+        states = {
+          warning = 30;
+          critical = 15;
+        }
         format = "󰁹{capacity}%";
       };
       pulseaudio = {
