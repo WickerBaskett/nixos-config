@@ -73,6 +73,7 @@
     mongosh
     yazi
     discord
+    libnotify
   ];
 
 

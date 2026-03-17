@@ -60,13 +60,13 @@
       };
       cpu = {
         interval = 10;
-        format = "󰻠 {}%";
+        format = " {}%";
         max-length = 10;
         on-click = "";
       };
       memory = {
         interval = 30;
-        format = " {}%";
+        format = " {}%";
         format-alt = " {used:0.1f}G";
         max-length = 10;
       };
@@ -89,10 +89,41 @@
         tooltip-format = ''
           <big>{:%Y %B}</big>
           <tt><small>{calendar}</small></tt>'';
+        calendar = {
+          format = {
+            months = "<span color='#ffead3'><b>{}</b></span>";
+            days = "<span color='#ecc6d9'><b>{}</b></span>";
+            weeks = "<span color='#99ffdd'><b>W{}</b></span>";
+            weekdays = "<span color='#ffcc66'><b>{}</b></span>";
+            today = "<span color='#ff6699'><b><u>{}</u></b></span>";
+          };
+        };
       };
       battery = {
         interval=30;
-        format = "󰁹{capacity}%";
+        states = {
+          warning = 30;
+          critical = 15;
+        };
+        events = {
+          on-dischraging-warning = "notify-send -u normal 'Low Battery'";
+          on-dischraging-critical = "notify-send -u critical 'Very Low Battery'";
+          on-charging-100 = "notify-send -u normal 'Battery Full!'";
+        };
+        format = "{icon} {capacity}%";
+        format-icons = [
+          "󰂃"
+          "󰁻"
+          "󰁼"
+          "󰁽"
+          "󰁾"
+          "󰁿"
+          "󰂀"
+          "󰂁"
+          "󰂂"
+          "󰁹"
+        ];
+        format-charging = "󰂄 {capacity}%";
       };
       pulseaudio = {
         format = "{icon} {volume}%";
