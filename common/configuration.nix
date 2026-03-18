@@ -74,6 +74,7 @@
     yazi
     discord
     libnotify
+    networkmanagerapplet
   ];
 
 

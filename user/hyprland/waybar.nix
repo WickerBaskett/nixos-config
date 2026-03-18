@@ -48,6 +48,7 @@
       ];
       modules-center = [ "hyprland/workspaces" ];
       modules-right = [
+        "tray"
         "network"
         "pulseaudio"
         "clock"
@@ -80,8 +81,7 @@
         spacing = 10;
       };
       network = {
-        format = "󰖩 {essid}";
-        format-disconnected = "󰖪 disconnected";
+        format = "{ipaddr}";
       };
       clock = {
         format = "{:%a %Y-%m-%d %I:%M:%S %p}  ";
