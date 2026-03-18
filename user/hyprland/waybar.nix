@@ -100,7 +100,8 @@
         };
       };
       battery = {
-        interval=30;
+        interval = 30;
+        full-at = 98;
         states = {
           warning = 30;
           critical = 15;
@@ -110,7 +111,7 @@
           on-dischraging-critical = "notify-send -u critical 'Very Low Battery'";
           on-charging-100 = "notify-send -u normal 'Battery Full!'";
         };
-        format = "{icon} {capacity}%";
+        format = "{icon}{capacity}%";
         format-icons = [
           "󰂃"
           "󰁻"
@@ -123,7 +124,7 @@
           "󰂂"
           "󰁹"
         ];
-        format-charging = "󰂄 {capacity}%";
+        format-charging = "󰂄{capacity}%";
       };
       pulseaudio = {
         format = "{icon} {volume}%";
