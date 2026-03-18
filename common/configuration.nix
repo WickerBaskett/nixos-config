@@ -75,6 +75,7 @@
     discord
     libnotify
     networkmanagerapplet
+    btop
   ];
 
 

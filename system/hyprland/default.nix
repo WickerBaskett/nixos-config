@@ -6,6 +6,7 @@
     rofi
     mako
     hyprpaper
+    hyprpicker
   ];
 
   # Install nerd fonts
