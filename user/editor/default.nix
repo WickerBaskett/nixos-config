@@ -2,15 +2,19 @@
 
 {
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
-  programs.vim = {
+  programs.nvf = {
     enable = true;
+    # your settings need to go into the settings attribute set
+    # most settings are documented in the appendix
     settings = {
-      expandtab = true;
-      shiftwidth = 2;
-      tabstop = 2;
+      vim.viAlias = false;
+      vim.vimAlias = true;
+      vim.lsp = {
+        enable = true;
+      };
     };
   };
 }
