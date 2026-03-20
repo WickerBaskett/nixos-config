@@ -7,14 +7,32 @@
 
   programs.nvf = {
     enable = true;
-    # your settings need to go into the settings attribute set
-    # most settings are documented in the appendix
     settings = {
-      vim.viAlias = false;
-      vim.vimAlias = true;
-      vim.lsp = {
-        enable = true;
+      vim = {
+        viAlias = true;
+        vimAlias = true;
+        lsp.enable = true;
+
+        utility.sleuth.enable = true; 
+        statusline.lualine.enable = true;
+        telescope = {
+          enable = true;
+          mappings = {
+            findFiles = "ff";
+            treesitter = "fs";
+            gitBranches = "fvb";
+            gitCommits = "fvw";
+            gitStatus = "fvs";
+          };
+        };
+        autocomplete.nvim-cmp.enable = true;
+
+        languages = {
+          enableTreesitter = true;
+          nix.enable = true;
+        };
       };
     };
   };
 }
+
