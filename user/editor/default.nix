@@ -13,7 +13,11 @@
         vimAlias = true;
         lsp.enable = true;
 
-        utility.sleuth.enable = true; 
+        utility = {
+          sleuth.enable = true; 
+          oil-nvim.enable = true;
+          oil-nvim.gitStatus.enable = true;
+        };
         statusline.lualine.enable = true;
         telescope = {
           enable = true;
