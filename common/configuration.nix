@@ -11,6 +11,7 @@
       ../system/docker
       ../system/languages
       ../system/hyprland
+      ../system/stylix
     ];
 
   # Bootloader.
