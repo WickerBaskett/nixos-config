@@ -39,6 +39,7 @@
         modules = [ 
           ./hosts/desktop/home.nix
           nvf.homeManagerModules.default
+          stylix.homeModules.stylix
         ];
       };
 
@@ -47,6 +48,7 @@
         modules = [ 
           ./hosts/laptop/home.nix
           nvf.homeManagerModules.default
+          stylix.homeModules.stylix
         ];
       };
     }; 
