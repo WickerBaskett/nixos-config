@@ -1,15 +1,14 @@
 {
 
-  description = "One flake to rule them all";
+  description = "Declarative Systems are pretty cool!";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     nvf.url = "github:notashelf/nvf";
-    stylix.url = "github:nix-community/stylix/release-25.11";
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, stylix, ... }:
+  outputs = { self, nixpkgs, home-manager, nvf, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -20,7 +19,6 @@
         inherit system;
         modules = [ 
           ./hosts/desktop/configuration.nix 
-          stylix.nixosModules.stylix
         ];
       };
 
@@ -28,7 +26,6 @@
         inherit system;
         modules = [ 
           ./hosts/laptop/configuration.nix
-          stylix.nixosModules.stylix
         ];
       };
     };
@@ -39,7 +36,6 @@
         modules = [ 
           ./hosts/desktop/home.nix
           nvf.homeManagerModules.default
-          stylix.homeModules.stylix
         ];
       };
 
@@ -48,7 +44,6 @@
         modules = [ 
           ./hosts/laptop/home.nix
           nvf.homeManagerModules.default
-          stylix.homeModules.stylix
         ];
       };
     }; 

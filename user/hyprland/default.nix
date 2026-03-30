@@ -6,7 +6,6 @@
     ./mako.nix
     ./hyprpaper.nix
     ./rofi.nix
-    ./kitty.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -232,6 +231,7 @@
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+        "opacity 0.8, class:kitty"
       ];
     };
   };
