@@ -14,7 +14,7 @@
       # ----  VARIABLES  ----
       "$mainMod" = "ALT"; 
       "$terminal" = "kitty";
-      "$fileManager" = "yazi" ;
+      "$fileManager" = "yazi";
       "$menu" = "rofi -show drun";
 
       # ----  ENV VARS  ----
@@ -154,9 +154,10 @@
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
-        "$mainMod, F, togglefloating,"
+        "$mainMod SHIFT, F, togglefloating,"
         "$mainMod, d, exec, $menu"
         "$mainMod, P, pseudo," # dwindle
+        "$mainMod, F, fullscreen,"
         "$mainMod, W, togglesplit," # dwindle
 
         # Move focus with mainMod + hjkl 
@@ -231,7 +232,7 @@
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "opacity 0.8, class:kitty"
+        "opacity 0.9, class:kitty"
       ];
     };
   };
