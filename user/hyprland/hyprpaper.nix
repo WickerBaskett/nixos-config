@@ -11,10 +11,11 @@
         "/home/wicker/wallpapers/sunset-fishing.png"
         "/home/wicker/wallpapers/dark-firewatch.png"
         "/home/wicker/wallpapers/forest-bridge.jpg"
+        "/home/wicker/wallpapers/among-trees-river.jpg"
       ];
 
       wallpaper = [
-        ",/home/wicker/wallpapers/forest-bridge.jpg"
+        ",/home/wicker/wallpapers/among-trees-river.jpg"
       ];
     };
   };
