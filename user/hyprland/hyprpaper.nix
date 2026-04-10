@@ -15,7 +15,7 @@
       ];
 
       wallpaper = [
-        ",/home/wicker/wallpapers/among-trees-river.jpg"
+        ",/home/wicker/wallpapers/forest-bridge.jpg"
       ];
     };
   };
