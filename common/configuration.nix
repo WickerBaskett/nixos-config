@@ -85,6 +85,7 @@
     libnotify
     networkmanagerapplet
     btop
+    gimp
   ];
 
 
