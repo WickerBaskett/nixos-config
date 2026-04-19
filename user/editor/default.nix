@@ -35,6 +35,8 @@
           enableTreesitter = true;
           nix.enable = true;
           clang.enable = true;
+          python.enable = true;
+          julia.enable = true;
         };
       };
     };
