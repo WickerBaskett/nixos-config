@@ -16,6 +16,8 @@
       sleuth.enable = true;
       todo-comments.enable = true;
       tinygit.enable = true;
+      treesitter-context.enable = true;
+      toggleterm.enable = true;
       
 
       cmp = {
@@ -64,9 +66,10 @@
     };
 
     keymaps = [
+      # File Navigation
       {
 	mode = "n";
-	key = "ff";
+	key = "<leader>ff";
 	action = "<cmd>Telescope find_files<CR>";
 	options = {
 	  desc = "Find files";
@@ -74,12 +77,22 @@
       }
       {
 	mode = "n";
-	key = "fo";
+	key = "<leader>fo";
 	action = "<cmd>Oil<CR>";
 	options = {
 	  desc = "Open Oil";
 	};
       }
+
+      # Terminals
+      {
+	mode = "n";
+	key = "<leader>tt";
+	action = "<cmd>ToggleTerm size=8 direction=horizontal name=desktop<CR>";
+	options = {
+	  desc = "Open terminal";
+	};
+      }	
 
       # Tinygit Keybinds
       {
