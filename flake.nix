@@ -9,7 +9,7 @@
     nixvim.url = "github:nix-community/nixvim/nixos-25.11";
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }:
+  outputs = { self, nixpkgs, home-manager, nvf, nixvim, ... }:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -37,6 +37,7 @@
         modules = [ 
           ./hosts/desktop/home.nix
           nvf.homeManagerModules.default
+          nixvim.homeModules.nixvim
         ];
       };
 
@@ -45,6 +46,7 @@
         modules = [ 
           ./hosts/laptop/home.nix
           nvf.homeManagerModules.default
+          nixvim.homeModules.nixvim
         ];
       };
     }; 
