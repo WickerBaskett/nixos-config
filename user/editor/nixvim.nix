@@ -34,6 +34,7 @@
 	  ];
 	};
       };
+      cmp-nvim-lsp.enable = true;
 
       treesitter = {
       	enable = true;
@@ -51,6 +52,7 @@
 	  cpp
 	  bash
 	  julia
+	  sql
 	];
       };
     };
@@ -59,6 +61,7 @@
       nixd.enable = true;
       clangd.enable = true;
       ty.enable = true; 
+      sqls.enable = true;
     };
 
     diagnostic.settings = {

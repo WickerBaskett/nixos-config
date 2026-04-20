@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -11,6 +11,7 @@
       ../system/docker
       ../system/languages
       ../system/hyprland
+      ../system/database
     ];
 
   # Bootloader.
@@ -68,7 +69,7 @@
     isNormalUser = true;
     description = "wicker";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
-    packages = with pkgs; [];
+    packages = [];
   };
 
   # List packages installed in system profile. To search, run:
