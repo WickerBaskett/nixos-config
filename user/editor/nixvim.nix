@@ -5,9 +5,7 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
-
     colorschemes.catppuccin.enable = true;
-
     plugins = {
       lualine.enable = true;
       telescope.enable = true;      
@@ -15,6 +13,8 @@
       lsp.enable = true;
       oil.enable = true;
       sleuth.enable = true;
+      todo-comments.enable = true;
+      tinygit.enable = true;
       
       cmp = {
 	enable = true;
