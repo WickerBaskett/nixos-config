@@ -5,6 +5,7 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
+    globals.mapleader = " ";
     colorschemes.catppuccin.enable = true;
     plugins = {
       lualine.enable = true;
@@ -77,6 +78,32 @@
 	action = "<cmd>Oil<CR>";
 	options = {
 	  desc = "Open Oil";
+	};
+      }
+
+      # Tinygit Keybinds
+      {
+	mode = "n";
+	key = "<leader>ga";
+	action = "<cmd>Tinygit interactiveStaging<CR>";
+	options = {
+	  desc = "Stage changes";
+	};
+      }
+      {
+	mode = "n";
+	key = "<leader>gc";
+	action = "<cmd>Tinygit smartCommit<CR>";
+	options = {
+	  desc = "Commit staged changes";
+	};
+      }
+      {
+	mode = "n";
+	key = "<leader>gp";
+	action = "<cmd>Tinygit push<CR>";
+	options = {
+	  desc = "Push changes";
 	};
       }
     ];
