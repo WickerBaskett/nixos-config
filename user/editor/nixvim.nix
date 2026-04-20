@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.nixvim = {
@@ -53,7 +53,12 @@
 
     lsp.servers = {
       nixd.enable = true;
+      clangd.enable = true;
       ty.enable = true; 
+    };
+
+    diagnostic.settings = {
+      virtual_text = true;
     };
 
     keymaps = [
@@ -63,6 +68,14 @@
 	action = "<cmd>Telescope find_files<CR>";
 	options = {
 	  desc = "Find files";
+	};
+      }
+      {
+	mode = "n";
+	key = "fo";
+	action = "<cmd>Oil<CR>";
+	options = {
+	  desc = "Open Oil";
 	};
       }
     ];
