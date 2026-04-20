@@ -16,6 +16,7 @@
       todo-comments.enable = true;
       tinygit.enable = true;
       
+
       cmp = {
 	enable = true;
 	settings = {
