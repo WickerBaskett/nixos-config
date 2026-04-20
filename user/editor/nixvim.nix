@@ -18,11 +18,17 @@
       
       cmp = {
 	enable = true;
-	settings.sources = [
-	  { name = "nvim_lsp"; }
-	  { name = "path"; }
-	  { name = "buffer"; }
-	];
+	settings = {
+	  mapping = {
+	    "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' })";
+	    "<CR>" = "cmp.mapping.confirm({ select = true })";
+	  };
+	  sources = [
+	    { name = "nvim_lsp"; }
+	    { name = "path"; }
+	    { name = "buffer"; }
+	  ];
+	};
       };
 
       treesitter = {
