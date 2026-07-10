@@ -88,6 +88,9 @@
     networkmanagerapplet
     btop
     gimp
+    vlc
+    obsidian
+    wl-clipboard
   ];
 
 

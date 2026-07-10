@@ -69,7 +69,7 @@
     };
 
     keymaps = [
-      # File Navigation
+      # File Navigation and Manipulation
       {
 	mode = "n";
 	key = "<leader>ff";
@@ -84,6 +84,14 @@
 	action = "<cmd>Oil<CR>";
 	options = {
 	  desc = "Open Oil";
+	};
+      }
+      {
+	mode = "n";
+	key = "<leader>fc";
+	action = "<cmd>%w !wl-copy<CR>";
+	options = {
+	  desc = "Copy File";
 	};
       }
 
