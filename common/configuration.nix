@@ -13,6 +13,7 @@
       ../system/hyprland
       ../system/database
       ../system/recording
+      ../system/sync
     ];
 
   # Bootloader.
