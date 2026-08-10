@@ -11,6 +11,8 @@
       ../system/docker
       ../system/languages
       ../system/hyprland
+      ../system/recording
+      ../system/sync
     ];
 
   # Bootloader.
@@ -88,6 +90,8 @@
     gimp
     obsidian
     brightnessctl
+    vlc
+    wl-clipboard
   ];
 
 
