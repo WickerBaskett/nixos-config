@@ -11,7 +11,6 @@
       ../system/docker
       ../system/languages
       ../system/hyprland
-      ../system/database
     ];
 
   # Bootloader.
@@ -87,6 +86,8 @@
     networkmanagerapplet
     btop
     gimp
+    obsidian
+    brightnessctl
   ];
 
 

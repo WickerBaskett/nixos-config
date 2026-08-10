@@ -7,4 +7,6 @@
     ../../system/gaming
   ];
   networking.hostName = "nixos-laptop"; # Define your hostname.
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }
