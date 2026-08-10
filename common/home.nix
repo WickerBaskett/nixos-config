@@ -21,6 +21,7 @@
       ll = "ls -l";
       ".." = "cd ..";
       "dcup" = "docker compose down; docker compose build; docker compose up";
+      "ssh" = "kitty +kitten ssh";
     };
   };
   

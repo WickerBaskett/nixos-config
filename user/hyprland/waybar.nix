@@ -35,6 +35,7 @@
       margin-left = 4;
       margin-right = 4;
       margin-top = 4;
+      margin-bottom = 0;
       spacing = 12;
       fixed-center = true;
       exclusive = true;

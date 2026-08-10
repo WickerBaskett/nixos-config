@@ -8,7 +8,6 @@
       numpy
       matplotlib
       xgboost
-      scikit-learn
     ]))
   ];
 }
