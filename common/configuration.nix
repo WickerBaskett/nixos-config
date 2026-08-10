@@ -92,6 +92,7 @@
     brightnessctl
     vlc
     wl-clipboard
+    slack
   ];
 
 
