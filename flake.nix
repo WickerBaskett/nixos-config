@@ -21,6 +21,7 @@
         inherit system;
         modules = [ 
           ./hosts/desktop/configuration.nix 
+          qylock.nixosModules.default
         ];
       };
 
@@ -28,6 +29,7 @@
         inherit system;
         modules = [ 
           ./hosts/laptop/configuration.nix
+          qylock.nixosModules.default
         ];
       };
     };

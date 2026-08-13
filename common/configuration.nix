@@ -58,6 +58,11 @@
     wayland.enable = true;
   };
 
+  programs.qylock = {
+    enable = true;
+    theme = "clockwork/neo-orbital";
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
