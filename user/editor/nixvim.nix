@@ -62,6 +62,7 @@
       clangd.enable = true;
       ty.enable = true; 
       sqls.enable = true;
+      rust_analyzer.enable = true;
     };
 
     diagnostic.settings = {
@@ -102,6 +103,32 @@
 	action = "<cmd>ToggleTerm size=8 direction=horizontal name=desktop<CR>";
 	options = {
 	  desc = "Open terminal";
+	};
+      }	
+
+      # Diagnostic
+      {
+	mode = "n";
+	key = "<leader>df";
+	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+	options = {
+	  desc = "Open Floating Diagnostic";
+	};
+      }	
+      {
+	mode = "n";
+	key = "<leader>dl";
+	action = "<cmd>lua vim.diagnostic.setloclist()<CR>";
+	options = {
+	  desc = "Open Location List Diagnostic";
+	};
+      }	
+      {
+	mode = "n";
+	key = "<leader>dq";
+	action = "<cmd>lua vim.diagnostic.setqflist()<CR>";
+	options = {
+	  desc = "Open Quick Fix Diagnostic";
 	};
       }	
 
