@@ -7,7 +7,6 @@
   
   environment.systemPackages = with pkgs; [
     clang 
-    julia-bin
   ];
 
   programs.nix-ld = {

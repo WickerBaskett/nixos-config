@@ -100,6 +100,7 @@
     vlc
     wl-clipboard
     slack
+    duckdb
   ];
 
 
