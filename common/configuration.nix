@@ -101,7 +101,7 @@
     wl-clipboard
     slack
     duckdb
-    godot_4_5
+    godot_4_7
   ];
 
 
