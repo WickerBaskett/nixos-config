@@ -12,17 +12,14 @@ in {
       splash = false;
 
       preload = [
-        "/home/wicker/wallpapers/sunset-clouds.jpg"
-        "/home/wicker/wallpapers/sunset-fishing.png"
-        "/home/wicker/wallpapers/dark-firewatch.png"
-        "/home/wicker/wallpapers/forest-bridge.jpg"
-        "/home/wicker/wallpapers/among-trees-river.jpg"
         "${mountainLake}"
       ];
 
-      wallpaper = [
-        ",${mountainLake}"
-      ];
+      wallpaper = {
+        monitor = "";
+        path = "${mountainLake}";
+        fit_mode = "cover";
+      };
     };
   };
 }
