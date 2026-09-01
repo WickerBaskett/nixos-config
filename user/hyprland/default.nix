@@ -11,6 +11,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
     settings = {
       # ----  VARIABLES  ----
       "$mainMod" = "ALT"; 
@@ -111,7 +112,7 @@
         ]; 
       };
       dwindle = {
-        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        # DEPRECATED # pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # You probably want this
       };
 
@@ -159,7 +160,7 @@
         "$mainMod, d, exec, $menu"
         "$mainMod, P, pseudo," # dwindle
         "$mainMod, F, fullscreen,"
-        "$mainMod, W, togglesplit," # dwindle
+        "$mainMod, W, layoutmsg, togglesplit," # dwindle
 
         # Move focus with mainMod + hjkl 
         "$mainMod, H, movefocus, l" 
@@ -229,7 +230,7 @@
         ", XF86AudioPrev, exec, playerctl previous"
       ];
 
-      windowrule = [
+      window_rule = [
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
