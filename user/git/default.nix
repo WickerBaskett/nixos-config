@@ -24,6 +24,7 @@
         b = "branch -a";
         rh = "reset --hard";
       };
+      push.autoSetupRemote = true;
       extraConfig = {
         init.defaultBranch = "main";
       };
