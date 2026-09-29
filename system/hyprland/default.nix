@@ -7,7 +7,7 @@
     mako
     hyprpaper
     hyprpicker
-    hyprlock
+    #    hyprlock
   ];
 
   # Install nerd fonts

@@ -6,7 +6,7 @@
     ./mako.nix
     ./hyprpaper.nix
     ./rofi.nix
-    ./hypridle.nix
+    #    ./hypridle.nix
   ];
 
   wayland.windowManager.hyprland = {

@@ -53,6 +53,7 @@
 	  bash
 	  julia
 	  sql
+	  rust
 	];
       };
     };
@@ -63,6 +64,7 @@
       ty.enable = true; 
       sqls.enable = true;
       rust_analyzer.enable = true;
+      wgsl_analyzer.enable = true;
     };
 
     diagnostic.settings = {
