@@ -54,6 +54,8 @@
 	  julia
 	  sql
 	  rust
+	] ++ [
+	  pkgs.tree-sitter-grammars.tree-sitter-wesl
 	];
       };
     };
@@ -163,5 +165,15 @@
 	};
       }
     ];
+
+    extraPackages = [
+      pkgs.tree-sitter
+    ];
+
+    filetype = {
+      extension = {
+	wesl = "wesl";
+      };
+    };
   };
 }
