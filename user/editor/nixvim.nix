@@ -64,7 +64,10 @@
       ty.enable = true; 
       sqls.enable = true;
       rust_analyzer.enable = true;
-      wgsl_analyzer.enable = true;
+      wgsl_analyzer = {
+	enable = true;
+	config.filetypes = [ "wgsl" "wesl" ];
+      };
     };
 
     diagnostic.settings = {
